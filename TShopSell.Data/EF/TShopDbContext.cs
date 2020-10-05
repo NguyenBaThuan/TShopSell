@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using TShopSell.Data.Configurations;
 using TShopSell.Data.Entities;
+using TShopSell.Data.Extensions;
 
 namespace TShopSell.Data.EF
 {
@@ -15,6 +16,7 @@ namespace TShopSell.Data.EF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Configure using fluent API
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -28,6 +30,10 @@ namespace TShopSell.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
+
+            // Data Seeding
+            modelBuilder.Seed();
+
             //base.OnModelCreating(modelBuilder);
         }
 
