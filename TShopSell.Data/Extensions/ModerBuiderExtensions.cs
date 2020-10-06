@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -85,7 +86,7 @@ namespace TShopSell.Data.Extensions
                 );
 
             // any guid
-            /*var roleId = new Guid("8D04DCE2-969A-435D-BBA4-DF3F325983DC");
+            var roleId = new Guid("8D04DCE2-969A-435D-BBA4-DF3F325983DC");
             var adminId = new Guid("69BD714F-9576-45BA-B5B7-F00649BE00DE");
             modelBuilder.Entity<AppRole>().HasData(new AppRole
             {
@@ -106,8 +107,8 @@ namespace TShopSell.Data.Extensions
                 EmailConfirmed = true,
                 PasswordHash = hasher.HashPassword(null, "Abcd1234$"),
                 SecurityStamp = string.Empty,
-                FirstName = "Toan",
-                LastName = "Bach",
+                FirstName = "Thuan",
+                LastName = "Nguyen",
                 Dob = new DateTime(2020, 01, 31)
             });
 
@@ -116,7 +117,7 @@ namespace TShopSell.Data.Extensions
                 RoleId = roleId,
                 UserId = adminId
             });
-            */
+            
         }
     }
 }
