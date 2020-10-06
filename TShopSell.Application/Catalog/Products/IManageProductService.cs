@@ -13,7 +13,7 @@ namespace TShopSell.Application.Catalog.Products
         Task<int> Update(ProductEditRequest request);
         Task<int> Delete(int ProductID);
 
-        List<ProductViewModel> GetAll();
+        Task<List<ProductViewModel>> GetAll();
         Task<PagedViewModel<ProductViewModel>> GetAllPaging(string keyword, int PageIndex, int PageSize);
     }
 }

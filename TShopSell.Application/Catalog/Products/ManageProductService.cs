@@ -47,5 +47,6 @@ namespace TShopSell.Application.Catalog.Products
         {
             throw new NotImplementedException();
         }
+
     }
 }
