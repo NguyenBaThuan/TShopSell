@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TShopSell.Application.Catalog.Products.Dtos;
+using TShopSell.Application.Catalog.Products.Dtos.Public;
 using TShopSell.Application.Dtos;
 
 namespace TShopSell.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        int Create(ProductCreateRequest request);
-        int Update(ProductEditRequest request);
-        int Delete(int ProductID);
 
-        PagedViewModel<ProductViewModel> GetAllByCategoryId(int categoryId,int pageIndex,int pageSize);
+        Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request);
 
     }
 }

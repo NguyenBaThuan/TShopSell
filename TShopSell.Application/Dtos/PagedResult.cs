@@ -1,14 +1,13 @@
-﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
+﻿    using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TShopSell.Application.Dtos
 {
-    public class PagedViewModel<T>
+    public class PagedResult<T>
     {
         public List<T> Items { set; get; }
         public int TotalRecord { set; get; }
-
     }
 }
